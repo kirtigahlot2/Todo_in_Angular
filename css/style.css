@@ -1,0 +1,45 @@
+
+body {
+  background-image: url("../background11.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+h1 {
+    color: black;
+    text-shadow: 5px 5px 10px  white;
+    font-family: 'Noto Serif', serif;
+  }
+
+  h3{
+    margin-left: 2%;
+    font-family: 'Noto Serif', serif;
+    text-shadow: 2px 2px 10px rgb(82 79 79);
+
+  }
+
+
+
+  h5{
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  hr{
+    height:1px;
+    border-width:0;
+    color:black;
+    background-color:black;
+  }
+
+  div.card {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
+  #todos{
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

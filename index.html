@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="todo" ng-controller="myctrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="./js/angular-storage.js"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+  </head>
+
+<body >
+    
+  <nav class="navbar navbar-dark bg-dark">
+          <h2 class="navbar-brand">Welcome to My Todo App</h2>
+          <form class="form-inline">
+              <input class="form-control mr-sm-2"  type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </nav>
+
+      <div class="container my-3">
+            <h1>Let's check what is there in the to-do list.</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Add a task</h5>
+                    <div class="form-group">
+                        <textarea class="form-control"  rows="3" ng-model="task"></textarea>
+                    </div>
+                    <button class="btn btn-success" ng-click="addTodo(task)" >Add</button>
+                </div>
+            </div>
+
+          <hr>
+          <hr>
+          <h3>This is your Todo List</h3>
+          <hr>
+          <hr>
+          <div  class="row container-fluid">
+
+            <div class="noteCard my-2 mx-2 card" style="width: 18rem;"  ng-repeat="x in tasks">
+                    <div class="card-body">
+                        <h5 class="card-title">Task</h5>
+                        <p class="card-text"> {{x}}</p>
+                        <button  class="btn btn-danger" ng-click="deleteTodo(x)" >Delete  </button>
+                    </div>
+                </div>
+          </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+           crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+           integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+           crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+           integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+           crossorigin="anonymous"></script>
+
+  </body>
+</html>
