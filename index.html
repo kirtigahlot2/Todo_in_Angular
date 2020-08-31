@@ -20,7 +20,7 @@
   <nav class="navbar navbar-dark bg-dark">
           <h2 class="navbar-brand">Welcome to My Todo App</h2>
           <form class="form-inline">
-              <input class="form-control mr-sm-2"  type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2"  type="search" placeholder="Search" aria-label="Search" ng-model='txt'>
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
       </nav>
@@ -44,7 +44,7 @@
           <hr>
           <div  class="row container-fluid">
 
-            <div class="noteCard my-2 mx-2 card" style="width: 18rem;"  ng-repeat="x in tasks">
+            <div class="noteCard my-2 mx-2 card" style="width: 18rem;"  ng-repeat="x in tasks | filter: txt">
                     <div class="card-body">
                         <h5 class="card-title">Task</h5>
                         <p class="card-text"> {{x}}</p>
